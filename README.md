@@ -1,6 +1,6 @@
 # 📤 Share to ChatGPT – Chrome Extension
 
-This Chrome extension lets you quickly share any webpage to ChatGPT.
+This Chrome extension lets you quickly share any webpage to ChatGPT. Concept is that you have a 'everything' project in your chatgpt plus account, that you post all your webpages(bookmark urls). 
 
 When you click the extension icon:
 
@@ -19,11 +19,6 @@ Perfect for sending articles, docs, or reference links to ChatGPT with minimal e
 3. Enable **Developer mode** (top-right toggle).
 4. Click **Load unpacked** and select the extension folder.
 5. Pin the extension to your toolbar for easy access.
-
----
-
-## 📁 File Structure
-
 
 ---
 

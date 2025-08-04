@@ -4,9 +4,9 @@ This Chrome extension lets you quickly share any webpage to ChatGPT. Concept is 
 
 When you click the extension icon:
 
-1. The current tab’s URL is **copied to your clipboard**.
-2. A new tab opens to [https://chat.openai.com](https://chat.openai.com).
-3. You can simply **paste (`Ctrl+V` / `Cmd+V`)** the URL into the ChatGPT prompt box.
+1. The current page’s URL is copied to your clipboard.
+2. A new tab opens directly to your specified ChatGPT project or conversation.
+3. You simply **paste (`Ctrl+V` / `Cmd+V`)** in the prompt box and go.
 
 Perfect for sending articles, docs, or reference links to ChatGPT with minimal effort.
 
@@ -19,6 +19,11 @@ Perfect for sending articles, docs, or reference links to ChatGPT with minimal e
 3. Enable **Developer mode** (top-right toggle).
 4. Click **Load unpacked** and select the extension folder.
 5. Pin the extension to your toolbar for easy access.
+6. Update config.json with your project url.
+            {
+            "chatgpt_project_url": "https://chatgpt.com/g/your-chat-id-goes-here"
+            }
+
 
 ---
 

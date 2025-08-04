@@ -1,13 +1,28 @@
-chrome.action.onClicked.addListener(async (tab) => {
-  if (!tab || !tab.id || !tab.url) return;
+async function getProjectUrl() {
+  const response = await fetch(chrome.runtime.getURL("config.json"));
+  const config = await response.json();
+  return config.chatgpt_project_url;
+}
 
-  // Inject the clipboard copier content script
+chrome.action.onClicked.addListener(async (tab) => {
+  if (!tab || !tab.url) return;
+
+  const url = tab.url;
+
+  // Copy current tab URL to clipboard
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ['copy.js']
+    func: (text) => {
+      navigator.clipboard.writeText(text).then(
+        () => console.log("URL copied to clipboard"),
+        (err) => console.error("Clipboard write failed:", err)
+      );
+    },
+    args: [url],
   });
 
-  // Open ChatGPT in a new tab
-  chrome.tabs.create({ url: "https://chat.openai.com/" });
+  // Open configured ChatGPT project tab
+  const chatGPTProjectUrl = await getProjectUrl();
+  chrome.tabs.create({ url: chatGPTProjectUrl });
 });
 

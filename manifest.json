@@ -12,6 +12,12 @@
     "service_worker": "background.js"
   },
   "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["config.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "icons": {
     "16": "icon.png",
     "48": "icon.png",

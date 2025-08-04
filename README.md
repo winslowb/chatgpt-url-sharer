@@ -20,6 +20,7 @@ Perfect for sending articles, docs, or reference links to ChatGPT with minimal e
 4. Click **Load unpacked** and select the extension folder.
 5. Pin the extension to your toolbar for easy access.
 6. Update config.json with your project url.
+
             {
             "chatgpt_project_url": "https://chatgpt.com/g/your-chat-id-goes-here"
             }
